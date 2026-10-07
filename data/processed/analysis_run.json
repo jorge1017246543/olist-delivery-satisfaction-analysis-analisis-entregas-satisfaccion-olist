@@ -1,0 +1,48 @@
+{
+  "run_utc": "2026-10-07T15:47:45.156Z",
+  "input_rows": {
+    "orders": 99441,
+    "reviews": 99224,
+    "customers": 99441,
+    "order_items": 112650,
+    "products": 32951
+  },
+  "quality_checks": {
+    "complete_delivered_orders": 96470,
+    "delivered_orders_with_review": 95824,
+    "orders_with_multiple_review_rows": 547,
+    "delivered_orders_without_customer_state": 0,
+    "delivered_orders_without_any_items": 0,
+    "delivered_orders_with_unknown_category": 1392
+  },
+  "definitions": {
+    "late": "Calendar day of actual customer delivery is after estimated delivery day.",
+    "review_by_order": "Arithmetic mean of all numeric review_score rows for an order.",
+    "low_review": "Order-level mean review_score <= 2.",
+    "category": "A multi-category order is counted once in each category it contains; category totals therefore do not sum to unique orders."
+  },
+  "overall": {
+    "source_orders": 99441,
+    "source_review_rows": 99224,
+    "delivered_orders_with_complete_dates": 96470,
+    "delivered_orders_with_review": 95824,
+    "late_orders": 6534,
+    "late_rate_pct": 6.77,
+    "avg_days_late_when_late": 10.62,
+    "reviewed_late_orders": 6381,
+    "low_review_orders": 12236,
+    "low_review_rate_overall_pct": 12.77,
+    "avg_review_on_time": 4.29,
+    "avg_review_late": 2.27,
+    "review_score_difference_late_minus_on_time": -2.02,
+    "low_review_rate_on_time_pct": 9.23,
+    "low_review_rate_late_pct": 62.36,
+    "low_review_risk_ratio_late_vs_on_time": 6.76,
+    "low_review_rate_difference_percentage_points": 53.13,
+    "share_of_low_reviews_from_late_orders_pct": 32.52,
+    "rating_mean_for_multiple_reviews_by_order": true,
+    "orders_with_multiple_review_rows": 547,
+    "low_review_definition": "order-level mean review_score <= 2",
+    "late_definition": "calendar day of actual delivery > calendar day of estimated delivery"
+  }
+}

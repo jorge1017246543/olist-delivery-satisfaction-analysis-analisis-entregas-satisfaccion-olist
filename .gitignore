@@ -1,0 +1,8 @@
+# Datos originales: se descargan localmente y no se publican en este repositorio.
+data/raw/*
+!data/raw/.gitkeep
+
+# La tabla a nivel pedido se regenera con el análisis; los agregados pequeños sí se versionan.
+data/processed/order_delivery_review.csv
+data/processed/olist.db
+data/processed/olist.db-*
